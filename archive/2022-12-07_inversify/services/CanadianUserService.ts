@@ -1,5 +1,5 @@
 import { injectable } from 'inversify';
-import container from '../../inversify.config';
+import container from '../inversify.config';
 import TUser from '../types/User';
 import UserService from './UserService';
 

@@ -2,7 +2,7 @@ import { injectable } from 'inversify';
 
 import csvtojson from 'csvtojson';
 import TUser from '../types/User';
-import container from '../../inversify.config';
+import container from '../inversify.config';
 
 @injectable()
 class UserService {
