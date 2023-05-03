@@ -1,8 +1,9 @@
+import EnchantedMazeFactory from '../EnchantedMazeFactory';
 import Maze from '../_base-classes/Maze';
 import MazeFactory from './MazeFactory';
 
 export default class AbstractFactoryMazeGame {
-  CreateMaze(mazeFactory: MazeFactory): Maze {
+  static CreateMaze(mazeFactory: MazeFactory): Maze {
     const maze = mazeFactory.MakeMaze();
     const r1 = mazeFactory.MakeRoom(1);
     const r2 = mazeFactory.MakeRoom(2);
@@ -24,3 +25,6 @@ export default class AbstractFactoryMazeGame {
     return maze;
   }
 }
+
+const enchantedMazeFactory = new EnchantedMazeFactory();
+const enchantedMaze = AbstractFactoryMazeGame.CreateMaze(enchantedMazeFactory);
